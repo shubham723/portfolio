@@ -151,7 +151,7 @@ const Contact = () => {
                       <h5 className="title-left">Get in Touch</h5>
                     </div>
                     <div className="more-info">
-                      <p className="lead text-[16px] text16">
+                      <p className="lead text-[16px] text16 mt-3">
                         I'm just a message away! If you have any questions,
                         ideas, or simply want to connect, feel free to reach
                         out. I'm here to assist you. Drop me a line using the
