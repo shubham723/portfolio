@@ -1534,7 +1534,10 @@ footer .credits a {
   background-color: white !important;
 }
 
-.navbar-collapse {
-  display: flex;
-  flex-direction: column;
+.white {
+  color: white !important;
+}
+
+.textnone {
+  text-decoration: none !important;
 }

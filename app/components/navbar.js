@@ -1,8 +1,9 @@
 "use client";
+import Link from "next/link";
 import { useEffect, useState } from "react";
-import { Container, Navbar } from "react-bootstrap";
+import { Container, Nav, Navbar } from "react-bootstrap";
 
-const Nav = () => {
+const AppNavBar = () => {
   const [bg, setBg] = useState(false);
   const navList = ["hero", "about", "services", "work", "contact"];
   const [activeSection, setActiveSection] = useState("hero");
@@ -62,11 +63,13 @@ const Nav = () => {
       expand="lg"
     >
       <Container>
-        <Navbar.Brand href="#home">Shubham</Navbar.Brand>
+        <Link href="/" className="textnone">
+            <Navbar.Brand className="white">Shubham</Navbar.Brand>
+        </Link>
         <Navbar.Toggle />
         <Navbar.Collapse className="justify-content-end gap-3">
           {navList.map((id) => (
-            <Navbar.Brand
+            <Nav.Link
               key={id}
               onClick={() => scrollToSection(id)}
               style={{
@@ -75,7 +78,7 @@ const Nav = () => {
               className="navUrl"
             >
               {id.toUpperCase()}
-            </Navbar.Brand>
+            </Nav.Link>
           ))}
         </Navbar.Collapse>
       </Container>
@@ -83,4 +86,4 @@ const Nav = () => {
   );
 };
 
-export default Nav;
+export default AppNavBar;
