@@ -1553,3 +1553,7 @@ footer .credits a {
     margin-top: 1rem !important;
   }
 }
+
+.lead {
+  margin-bottom: 1rem !important;
+}
