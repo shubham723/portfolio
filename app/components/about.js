@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React from "react";
 import Image from "next/image";
 
@@ -17,10 +17,10 @@ const About = () => {
                   <div className="grid md:grid-cols-3 gap-4 grid-cols-1">
                     <div className="">
                       <div className="about-img">
-                        <Image
-                          src="/assets/img/testimonial-2.jpg"
-                          className="img-fluid rounded b-shadow-a"
-                          alt=""
+                        <img
+                          src="/assets/img/shubham-3.png"
+                          className="rounded b-shadow-a profile-pic"
+                          alt="Profile Picture"
                           width={100}
                           height={100}
                         />
@@ -49,25 +49,25 @@ const About = () => {
                   </div>
                   <div className="skill-mf">
                     <p className="title-s">Skill</p>
-                    <span>HTML</span> 
+                    <span>HTML</span>
                     {/* <span className="pull-right"></span> */}
                     <div className="progress">
                       <div
                         className="progress-bar"
                         role="progressbar"
-                        style={{ width: "70%" }}
+                        style={{ width: "90%" }}
                         aria-valuenow="85"
                         aria-valuemin="0"
                         aria-valuemax="100"
                       ></div>
                     </div>
-                    <span>CSS3</span> 
+                    <span>CSS3</span>
                     {/* <span className="pull-right">90%</span> */}
                     <div className="progress">
                       <div
                         className="progress-bar"
                         role="progressbar"
-                        style={{ width: "75%" }}
+                        style={{ width: "90%" }}
                         aria-valuenow="75"
                         aria-valuemin="0"
                         aria-valuemax="100"
@@ -79,13 +79,13 @@ const About = () => {
                       <div
                         className="progress-bar"
                         role="progressbar"
-                        style={{ width: "80%" }}
+                        style={{ width: "85%" }}
                         aria-valuenow="90"
                         aria-valuemin="0"
                         aria-valuemax="100"
                       ></div>
                     </div>
-                    <span>REACT</span> 
+                    <span>REACT</span>
                     {/* <span className="pull-right">95%</span> */}
                     <div className="progress">
                       <div
@@ -97,7 +97,7 @@ const About = () => {
                         aria-valuemax="100"
                       ></div>
                     </div>
-                    <span>NODE</span> 
+                    <span>NODE</span>
                     {/* <span className="pull-right">95%</span> */}
                     <div className="progress">
                       <div
@@ -109,8 +109,7 @@ const About = () => {
                         aria-valuemax="100"
                       ></div>
                     </div>
-
-                    <span>NEXT</span> 
+                    <span>NEXT</span>
                     {/* <span className="pull-right">95%</span> */}
                     <div className="progress">
                       <div
@@ -122,8 +121,7 @@ const About = () => {
                         aria-valuemax="100"
                       ></div>
                     </div>
-
-                    <span>AWS</span> 
+                    <span>AWS</span>
                     {/* <span className="pull-right">85%</span> */}
                     <div className="progress">
                       <div
@@ -135,7 +133,7 @@ const About = () => {
                         aria-valuemax="100"
                       ></div>
                     </div>
-                    <span>GIT</span> 
+                    <span>GIT</span>
                     {/* <span className="pull-right">90%</span> */}
                     <div className="progress">
                       <div
@@ -147,7 +145,7 @@ const About = () => {
                         aria-valuemax="100"
                       ></div>
                     </div>
-                    <span>MYSQL</span> 
+                    <span>MYSQL</span>
                     {/* <span className="pull-right">90%</span> */}
                     <div className="progress">
                       <div
@@ -159,7 +157,7 @@ const About = () => {
                         aria-valuemax="100"
                       ></div>
                     </div>
-                    <span>MongoDB</span> 
+                    <span>MongoDB</span>
                     {/* <span className="pull-right">90%</span> */}
                     <div className="progress">
                       <div
@@ -172,12 +170,12 @@ const About = () => {
                       ></div>
                     </div>
                     <span>TypeScript</span>
-                     {/* <span className="pull-right">90%</span> */}
+                    {/* <span className="pull-right">90%</span> */}
                     <div className="progress">
                       <div
                         className="progress-bar"
                         role="progressbar"
-                        style={{ width: "80%" }}
+                        style={{ width: "85%" }}
                         aria-valuenow="90"
                         aria-valuemin="0"
                         aria-valuemax="100"
@@ -191,27 +189,28 @@ const About = () => {
                       <h5 className="title-left">About me</h5>
                     </div>
                     <p className="lead">
-                      My passion for technology has been a driving
-                      force throughout my journey in web development. My journey
-                      in web development has been characterized by a constant
-                      pursuit of knowledge, keeping me at the forefront of
-                      industry trends and technologies.
+                      I take pride in showcasing myself as a
+                      web developer who not only possesses technical expertise
+                      but also values the personal touch in my work. I believe
+                      that a website should not only look visually appealing but
+                      also reflect the personality and goals of the individual
+                      or business it represents.
                     </p>
                     <p className="lead">
-                      Collaboration is at the core of my approach, as I believe
-                      that effective communication and teamwork are essential
-                      for bringing any digital project to completion. Whether it's
-                      building responsive and user-friendly interfaces or
-                      optimizing websites for performance, I am committed to
-                      delivering solutions that not only meet but exceed the
-                      expectations of clients and end-users alike
+                      Collaboration is at the heart of my approach as a web
+                      developer. I understand that effective communication and
+                      teamwork are essential for creating successful websites.
+                      By actively involving clients throughout the development
+                      process, I ensure that their vision is accurately
+                      translated into a functional and aesthetically pleasing
+                      website.
                     </p>
                     <p className="lead">
                       In the dynamic world of web development, I find joy in the
                       process of continuous learning and problem-solving. My
                       commitment to staying current with emerging technologies
                       allows me to offer innovative solutions tailored to the
-                      unique needs of each project. Welcome to the realm of web
+                      unique needs of each project. Welcome to the world of web
                       development, where creativity meets functionality, and
                       together, we can bring your digital aspirations to life.
                     </p>

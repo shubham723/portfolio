@@ -46,7 +46,7 @@ const Contact = () => {
                 <div className="grid grid-col-1 md:grid-cols-2 gap-4">
                   <div className="">
                     <div className="title-box-2">
-                      <h5 className="title-left">Send Message Us</h5>
+                      <h5 className="title-left">Send Message</h5>
                     </div>
                     <div>
                       <form onSubmit={handleSubmit(onSubmit)}>
@@ -166,7 +166,7 @@ const Contact = () => {
                               ST BOSTON, MA 02108
                             </li> */}
                         <li className="flex justify-start items-center gap-2">
-                          <FaSquarePhone /> +91-8054296478
+                          <FaSquarePhone /> +918054296478
                         </li>
                         <li className="flex justify-start items-center gap-2">
                           <IoMdMail /> sshubham7774@gmail.com

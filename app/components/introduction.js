@@ -5,23 +5,22 @@ import { TypeAnimation } from "react-type-animation";
 const Introduction = () => {
   return (
     <div
-        id="hero"
-        className="hero route bg-image"
-        style={{ backgroundImage: "url(assets/img/hero-bg.jpg)" }}
+        id="introduction"
+        className="hero route bg-image hero-bg"
       >
         <div className="overlay-itro"></div>
         <div className="hero-content display-table">
           <div className="table-cell">
             <div className="container">
-              {/* <!--<p className="display-6 color-d">Hello, world!</p>--> */}
-              <h1 className="hero-title mb-4">I am Shubham</h1>
+              <p className="display-6 color-d">Hello I'm</p>
+              <h1 className="hero-title mb-4"> Shubham Bhardwaj</h1>
               <p className="hero-subtitle">
                 <TypeAnimation
                   sequence={[
                     // Same substring at the start will only be typed out once, initially
-                    "Web Desginer",
-                    1000, // wait 1s before replacing "Mice" with "Hamsters"
                     "Web Deveolper",
+                    1000, // wait 1s before replacing "Mice" with "Hamsters"
+                    "Web Desginer",
                     1000,
                     "Freelancer",
                     1000,
