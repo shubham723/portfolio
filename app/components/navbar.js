@@ -5,7 +5,7 @@ import { Container, Nav, Navbar } from "react-bootstrap";
 
 const AppNavBar = () => {
   const [bg, setBg] = useState(false);
-  const navList = ["introduction", "about", "work", "contact"];
+  const navList = ["home", "about", "work", "contact"];
   const [activeSection, setActiveSection] = useState("hero");
 
   const handleSetActiveSection = (id) => {
@@ -63,7 +63,9 @@ const AppNavBar = () => {
       expand="lg"
     >
       <Container>
-        
+        <Link href="/" className="textnone">
+            <Navbar.Brand className="white">Shubham</Navbar.Brand>
+        </Link>
         <Navbar.Toggle />
         <Navbar.Collapse className="justify-content-end gap-3">
           {navList.map((id) => (

@@ -5,7 +5,7 @@ import { TypeAnimation } from "react-type-animation";
 const Introduction = () => {
   return (
     <div
-        id="introduction"
+        id="home"
         className="hero route bg-image hero-bg"
       >
         <div className="overlay-itro"></div>
