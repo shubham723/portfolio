@@ -5,6 +5,7 @@ import Work from "../../components/work";
 import { portfolioData } from "@/lib/data";
 import Spinner from "react-bootstrap/Spinner";
 import WorkBanner from "../../components/workBanner";
+import NotFound from "@/app/not-found";
 
 const Portfolio = ({ params }) => {
   const [loading, setLoading] = useState(true);
@@ -31,11 +32,14 @@ const Portfolio = ({ params }) => {
             <Spinner animation="border" />
         </div>
       ) : (
+        data ?
         <>
           <WorkBanner />
           <Work data={data} />
           {/* <Footer /> */}
         </>
+        : 
+        <NotFound />
       )}
     </>
   );

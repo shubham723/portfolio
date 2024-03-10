@@ -49,7 +49,7 @@ const About = () => {
                   </div>
                   <div className="skill-mf">
                     <p className="title-s">Skill</p>
-                    <span>HTML</span>
+                    <span>HTML, CSS, JavaScript</span>
                     {/* <span className="pull-right"></span> */}
                     <div className="progress">
                       <div
@@ -61,37 +61,13 @@ const About = () => {
                         aria-valuemax="100"
                       ></div>
                     </div>
-                    <span>CSS3</span>
-                    {/* <span className="pull-right">90%</span> */}
-                    <div className="progress">
-                      <div
-                        className="progress-bar"
-                        role="progressbar"
-                        style={{ width: "90%" }}
-                        aria-valuenow="75"
-                        aria-valuemin="0"
-                        aria-valuemax="100"
-                      ></div>
-                    </div>
-                    <span>JAVASCRIPT</span>{" "}
-                    {/* <span className="pull-right">90%</span> */}
-                    <div className="progress">
-                      <div
-                        className="progress-bar"
-                        role="progressbar"
-                        style={{ width: "85%" }}
-                        aria-valuenow="90"
-                        aria-valuemin="0"
-                        aria-valuemax="100"
-                      ></div>
-                    </div>
                     <span>REACT</span>
                     {/* <span className="pull-right">95%</span> */}
                     <div className="progress">
                       <div
                         className="progress-bar"
                         role="progressbar"
-                        style={{ width: "85%" }}
+                        style={{ width: "90%" }}
                         aria-valuenow="90"
                         aria-valuemin="0"
                         aria-valuemax="100"
@@ -103,7 +79,7 @@ const About = () => {
                       <div
                         className="progress-bar"
                         role="progressbar"
-                        style={{ width: "85%" }}
+                        style={{ width: "92%" }}
                         aria-valuenow="90"
                         aria-valuemin="0"
                         aria-valuemax="100"
@@ -115,7 +91,7 @@ const About = () => {
                       <div
                         className="progress-bar"
                         role="progressbar"
-                        style={{ width: "85%" }}
+                        style={{ width: "90%" }}
                         aria-valuenow="90"
                         aria-valuemin="0"
                         aria-valuemax="100"
@@ -123,18 +99,6 @@ const About = () => {
                     </div>
                     <span>AWS</span>
                     {/* <span className="pull-right">85%</span> */}
-                    <div className="progress">
-                      <div
-                        className="progress-bar"
-                        role="progressbar"
-                        style={{ width: "75%" }}
-                        aria-valuenow="90"
-                        aria-valuemin="0"
-                        aria-valuemax="100"
-                      ></div>
-                    </div>
-                    <span>GIT</span>
-                    {/* <span className="pull-right">90%</span> */}
                     <div className="progress">
                       <div
                         className="progress-bar"
@@ -206,13 +170,13 @@ const About = () => {
                       website.
                     </p>
                     <p className="lead">
-                      In the dynamic world of web development, I find joy in the
-                      process of continuous learning and problem-solving. My
-                      commitment to staying current with emerging technologies
-                      allows me to offer innovative solutions tailored to the
-                      unique needs of each project. Welcome to the world of web
-                      development, where creativity meets functionality, and
-                      together, we can bring your digital aspirations to life.
+                      In the dynamic world of web development, I find joy in the 
+                      process of continuous learning and problem-solving. My 
+                      commitment is to staying current with emerging technologies that 
+                      allow me to offer innovative solutions tailored to the 
+                      unique needs of each project. Welcome to the world of web 
+                      development, where creativity meets functionality, and together, 
+                      we can bring your digital aspirations to life.
                     </p>
                   </div>
                 </div>
