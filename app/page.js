@@ -8,13 +8,17 @@ import Portfolio from "./components/portfolio";
 import Contact from "./components/contact";
 // import Footer from "./components/footer";
 import { ToastContainer } from 'react-toastify';
+import Navbar from "./components/nav";
+import { useState } from "react";
 
 export default function Home() {
+  const [open, setOpen] = useState(false);
   return (
     <div>
       <ToastContainer />
-      <ScrollToTop smooth />
-      <Nav />
+      {!open && <ScrollToTop smooth />}
+      <Navbar open={open} setOpen={setOpen} />
+      {/* <Nav /> */}
       <Introduction />
 
       <main id="main">

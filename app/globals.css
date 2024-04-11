@@ -1479,7 +1479,13 @@ footer .credits a {
 
 .navBackground {
   background: rgba(0, 0, 0, 0.9);
-  min-height: 60px;
+  height: 60px;
+}
+
+
+.transparent {
+  background: transparent;
+  height: 60px;
 }
 
 .scroll-to-top {
@@ -1548,10 +1554,27 @@ footer .credits a {
   text-decoration: none !important;
 }
 
+.progressBar {
+  height: 10px;
+  background-color: #0078ff;
+}
+
+.phoneSvg {
+  stroke: orange;
+  position: absolute;
+  margin: auto;
+  z-index: -1;
+  right: 10%;
+}
+
 @media screen and (max-width: 768px) {
+  .phoneSvg {
+    right: 6%;
+    top: 45%;
+  }
   .about-mf .about-img img {
     margin: auto;
-    width: 40vw;
+    width: 40%;
   }
 
   .lead {

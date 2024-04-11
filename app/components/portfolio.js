@@ -1,13 +1,28 @@
 "use client";
 import { portfolioData } from "@/lib/data";
+import { useScroll, useSpring, motion } from "framer-motion";
 import Link from "next/link";
+import { useRef } from "react";
 import { CiCirclePlus } from "react-icons/ci";
 
 const Portfolio = () => {
+  const ref = useRef();
+
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["end end", "start start"],
+  });
+
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+  });
+
   return (
     <section
       id="work"
       className="portfolio-mf sect-pt4 route flex place-content-center"
+      ref={ref}
     >
       <div className="container">
         <div className="row">
@@ -15,10 +30,10 @@ const Portfolio = () => {
             <div className="title-box text-center">
               <h3 className="title-a">Portfolio</h3>
               <p className="subtitle-a">
-                Explore our some of works, where creativity meets
+                Explore my some of works, where creativity meets
                 accomplishment in every project
               </p>
-              <div className="line-mf"></div>
+              <motion.div style={{ scaleX }} className="progressBar"></motion.div>
             </div>
           </div>
         </div>
