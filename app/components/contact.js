@@ -51,7 +51,7 @@ const Contact = () => {
 
   return (
     <section
-      id="contact"
+      id="Contact"
       className="paralax-mf footer-paralax bg-image sect-mt4 route flex place-content-center"
       style={{ backgroundImage: "url(assets/img/overlay-bg.jpg)" }}
       ref={ref}

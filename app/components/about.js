@@ -1,11 +1,47 @@
 "use client";
 import React from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
+
+
+const container = {
+  hidden: { opacity: 0 },
+  visible: (i = 1) => ({
+    opacity: 1,
+    transition: { staggerChildren: 0.12, delayChildren: 0.04 * i },
+  }),
+};
+
+// Variants for each word.
+
+const child = {
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      type: "spring",
+      damping: 12,
+      stiffness: 100,
+    },
+  },
+  hidden: {
+    opacity: 0,
+    x: 20,
+    transition: {
+      type: "spring",
+      damping: 12,
+      stiffness: 100,
+    },
+  },
+};
+
 
 const About = () => {
+  const text = "About me";
+  const words = text.split(" ");
   return (
     <section
-      id="about"
+      id="About"
       className="about-mf sect-pt4 route flex place-content-center"
     >
       <div className="container">
@@ -149,9 +185,23 @@ const About = () => {
                 </div>
                 <div className="w-full md:w-1/2 ml-5">
                   <div className="about-me pt-4 pt-md-0">
-                    <div className="title-box-2">
-                      <h5 className="title-left">About me</h5>
-                    </div>
+                    <motion.div className="title-box-2"
+                      variants={container}
+                      initial="hidden"
+                      whileInView="visible"
+                    >
+                      <h5 className="title-left">
+                        {words.map((word, index) => (
+                          <motion.span
+                            variants={child}
+                            style={{ marginRight: "5px" }}
+                            key={index}
+                          >
+                            {word}
+                          </motion.span>
+                        ))}
+                      </h5>
+                    </motion.div>
                     <p className="lead">
                       I take pride in showcasing myself as a
                       web developer who not only possesses technical expertise
@@ -170,12 +220,12 @@ const About = () => {
                       website.
                     </p>
                     <p className="lead">
-                      In the dynamic world of web development, I find joy in the 
-                      process of continuous learning and problem-solving. My 
-                      commitment is to staying current with emerging technologies that 
-                      allow me to offer innovative solutions tailored to the 
-                      unique needs of each project. Welcome to the world of web 
-                      development, where creativity meets functionality, and together, 
+                      In the dynamic world of web development, I find joy in the
+                      process of continuous learning and problem-solving. My
+                      commitment is to staying current with emerging technologies that
+                      allow me to offer innovative solutions tailored to the
+                      unique needs of each project. Welcome to the world of web
+                      development, where creativity meets functionality, and together,
                       we can bring your digital aspirations to life.
                     </p>
                   </div>

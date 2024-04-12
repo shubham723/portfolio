@@ -20,7 +20,7 @@ const Portfolio = () => {
 
   return (
     <section
-      id="work"
+      id="Portfolio"
       className="portfolio-mf sect-pt4 route flex place-content-center"
       ref={ref}
     >

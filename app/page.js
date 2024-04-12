@@ -1,15 +1,16 @@
 'use client'
 import ScrollToTop from "react-scroll-to-top";
-import Nav from "./components/navbar";
+// import Nav from "./components/navbar";
 import Introduction from "./components/introduction";
 import About from "./components/about";
-import Services from "./components/services";
+// import Services from "./components/services";
 import Portfolio from "./components/portfolio";
 import Contact from "./components/contact";
 // import Footer from "./components/footer";
 import { ToastContainer } from 'react-toastify';
-import Navbar from "./components/nav";
+// import Navbar from "./components/nav";
 import { useState } from "react";
+import Navbar from "./components/navbar/leftNavBar";
 
 export default function Home() {
   const [open, setOpen] = useState(false);
@@ -17,6 +18,7 @@ export default function Home() {
     <div>
       <ToastContainer />
       {!open && <ScrollToTop smooth />}
+      {/* <Navbar open={open} setOpen={setOpen} /> */}
       <Navbar open={open} setOpen={setOpen} />
       {/* <Nav /> */}
       <Introduction />
