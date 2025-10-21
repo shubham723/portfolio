@@ -31,17 +31,17 @@ body {
   cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='8' height='8'><circle cx='4' cy='4' r='4' fill='%2#6ca7c9' /></svg>") 4 4, auto;
 }
 
-h1,
+/* h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
   color: #1e1e1e;
-}
+} */
 
 a {
-  color: #1e1e1e;
+  /* color: #1e1e1e; */
   text-decoration: none;
   transition: all 0.5s ease-in-out;
 }
@@ -236,8 +236,15 @@ a:hover {
   margin-bottom: 0 !important;
   text-align: center !important;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 768px) and (max-width: 1441px) {
     font-size: 48px !important;
+  }
+
+  @media screen and (min-width: 1441px) {
+    font-size: 104.62px !important;
+    line-height: 90.48px;
+    text-align: center;
+    margin-bottom: 12px;
   }
 
   span {
@@ -248,9 +255,15 @@ a:hover {
     font-family: 'Libre Bodoni', serif;
     font-style: italic;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 768px) and (max-width: 1441px) {
       font-size: 104px !important;
       line-height: 90.48px;
+    }
+
+    @media screen and (min-width: 1441px) {
+      font-size: 104.62px !important;
+      line-height: 90.48px;
+      text-align: center;
     }
   }
 }
@@ -325,13 +338,21 @@ a:hover {
   text-transform: uppercase;
   margin-bottom: 0;
 
-  @media screen and (min-width:744px) {
+  @media screen and (min-width:744px) and (max-width: 1132px) {
     font-size: 20px;
     display: block;
   }
 
-  @media screen and (min-width: 1132px) {
+  @media screen and (min-width: 1132px) and (max-width: 1441px) {
     font-size: 26px;
+    display: block;
+  }
+
+  @media screen and (min-width: 1441px) {
+    margin-top: 24px;
+    display: block;
+    font-size: 28px;
+    letter-spacing: 2px;
   }
 }
 
@@ -350,6 +371,7 @@ a:hover {
   flex: 0 0 50%;
   max-width: 50%;
   padding-bottom: 20px;
+  font-size: 18px;
 
   .title {
     opacity: .8;
@@ -426,7 +448,11 @@ a:hover {
   }
 
   @media screen and (min-width: 1132px) and (max-width: 1441px) {
-    padding: 60px 40px;
+    padding: 60px 80px;
+  }
+
+  @media screen and (min-width: 1441px) {
+    padding: 60px 80px;
   }
 
   .vision-section {
@@ -451,6 +477,18 @@ a:hover {
       padding: 30px 20px;
       align-items: center;
     }
+
+    @media screen and (min-width: 1441px) {
+      border-radius: 8px;
+      padding: 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      background-size: cover;
+      flex-direction: row;
+      gap: 20px;
+      background-position: inherit;
+    }
   }
 
   .vision-btn {
@@ -471,10 +509,28 @@ a:hover {
     width: 319px;
     font-size: 14px;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 768px) and (max-width: 1441px) {
       padding: 24px 168px;
       width: 100%;
       font-size: 16px;
+    }
+
+    @media screen and (min-width: 1441px) {
+      background: linear-gradient(328.68deg, rgba(215, 215, 215, 0.178039) 19.02%, rgba(255, 255, 255, 0.2) 81.19%);
+      backdrop-filter: blur(12px);
+      border: none;
+      color: #fffffa;
+      font-family: Montserrat, sans-serif;
+      padding: 24px 24px;
+      border-radius: 38px;
+      font-size: 16px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      white-space: nowrap;
+      min-width: 365px;
     }
 
     a {
@@ -492,6 +548,10 @@ a:hover {
   }
 
   .vision-left {
+    @media screen and (min-width: 1441px) {
+      max-width: 1192px;
+    }
+
     h2 {
       color: #fff;
       font-size: 24px;
@@ -501,9 +561,13 @@ a:hover {
       font-family: Montserrat, sans-serif;
       text-align: left;
 
-      @media screen and (min-width: 768px) {
+      @media screen and (min-width: 768px) and (max-width: 1441px) {
         font-size: 32px;
         text-align: center;
+      }
+
+      @media screen and (min-width: 1441px) {
+        font-size: 44px;
       }
     }
 
@@ -516,10 +580,15 @@ a:hover {
       font-weight: 400;
       text-align: left;
 
-      @media screen and (min-width: 768px) {
+      @media screen and (min-width: 768px) and (max-width: 1441px) {
         line-height: 34px;
         font-size: 18px;
         text-align: center;
+      }
+
+      @media screen and (min-width: 1441px) {
+        font-size: 24px;
+        line-height: 34px;
       }
     }
   }
@@ -1180,8 +1249,13 @@ a:hover {
       margin-top: 24px;
       font-size: 14px;
 
-      @media screen and (min-width: 768px) {
+      @media screen and (min-width: 768px) and (max-width: 1441px) {
         font-size: 1rem;
+      }
+
+      @media screen and (min-width: 1441px) {
+        font-size: 20px;
+        word-spacing: 2px;
       }
     }
   }
@@ -1249,9 +1323,14 @@ a:hover {
     backdrop-filter: blur(12px);
     color: #fffffa;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 768px) and (max-width: 1441px) {
       width: 190px;
       padding: 12px 30px;
+    }
+
+    @media screen and (min-width: 1441px) {
+      padding: 12px 80px;
+      width: 100%;
     }
   }
 
@@ -1283,6 +1362,13 @@ a:hover {
       font-size: 32px;
       font-weight: 600;
     }
+
+    @media screen and (min-width: 1441px) {
+      font-size: 38px;
+      margin-bottom: 40px;
+      line-height: 110%;
+      font-weight: 600;
+    }
   }
 
   .desc {
@@ -1291,6 +1377,10 @@ a:hover {
     line-height: 20px;
     margin-bottom: 24px;
     color: #fff;
+
+    @media screen and (min-width: 1441px) {
+      font-size: 24px;
+    }
   }
 
   ul {
@@ -1307,6 +1397,11 @@ a:hover {
     font-family: "Montserrat", sans-serif;
     color: #dfd3d3;
     line-height: 45px;
+
+    @media screen and (min-width: 1441px) {
+      font-size: 24px;
+    }
+    
   }
 }
 
@@ -1334,12 +1429,18 @@ a:hover {
       font-weight: 600;
     }
 
+    @media screen and (min-width: 1441px) {
+      font-size: 38px;
+      margin-bottom: 40px;
+      line-height: 110%;
+      font-weight: 600;
+    }
   }
 
   .lead-info {
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 20px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 110%;
     margin-bottom: 35px;
     color: #dfd3d3;
 
@@ -1349,6 +1450,12 @@ a:hover {
 
     @media screen and (min-width: 1132px) and (max-width: 1441px) {
       font-size: 22px;
+      line-height: 110%;
+    }
+
+    @media screen and (min-width: 1441px) {
+      font-size: 24px;
+      line-height: 120%;
     }
   }
 
@@ -1393,8 +1500,16 @@ a:hover {
   color: rgb(142 186 255 / 7%);
   top: 4%;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 768px) and (max-width: 1134px) {
     top: 8%;
+  }
+
+  @media screen and (min-width: 1134px) and (max-width: 1441px) {
+    top: 9%
+  }
+
+  @media screen and (min-width: 1441px) {
+    top: 9%;
   }
 }
 
@@ -1824,19 +1939,26 @@ a:hover {
 .w-more {
   span {
     color: white;
-    font-size: 12px;
+    font-size: 14px;
     word-spacing: 2px;
+    margin-top: 4px;
 
     @media screen and (min-width: 744px) and (max-width: 1132px) {
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
       word-spacing: 1px;
+      font-size: 12px;
     }
 
     @media screen and (min-width: 1132px) and (max-width: 1441px) {
       margin-top: 4px;
       font-size: 14px;
+    }
+
+    @media screen and (min-width:1441px) {
+      font-size: 18px;
+      margin-top: 4px;
     }
   }
 }
@@ -1854,7 +1976,7 @@ a:hover {
 }
 
 .w-title {
-  font-size: 22px;
+  font-size: 24px;
   margin-bottom: 0;
 
   @media screen and (min-width: 744px) and (max-width: 1132px) {
@@ -1863,6 +1985,11 @@ a:hover {
 
   @media screen and (min-width: 1132px) and (max-width: 1441px) {
     font-size: 22px;
+    margin-bottom: 4px;
+  }
+
+  @media screen and (min-width:1441px) {
+    font-size: 24px;
     margin-bottom: 4px;
   }
 }
@@ -2100,6 +2227,10 @@ a:hover {
     width: 100%;
     height: auto;
     opacity: 0.4;
+
+    @media screen and (min-width: 1441px) {
+      left: 28%;
+    }
   }
 }
 
@@ -2780,14 +2911,20 @@ footer .credits a {
   font-size: 24px;
   margin-top: 24px;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 768px) and (max-width: 1132px) {
     font-weight: 600;
     font-size: 24px;
     margin-top: 0;
   }
 
-  @media screen and (min-width: 1132px) {
+  @media screen and (min-width: 1132px) and (max-width: 1441px) {
     font-size: 28px;
+    font-weight: 600;
+  }
+
+  @media screen and (min-width: 1441px) {
+    font-size: 36px;
+    font-weight: 600;
   }
 }
 
@@ -2802,8 +2939,8 @@ footer .credits a {
 
   p {
     margin-bottom: 0;
-    font-size: 16px;
-    font-weight: 300;
+    font-size: 17px;
+    font-weight: 400;
 
     @media screen and (min-width: 768px) and (max-width: 1132px) {
       font-size: 18px;
@@ -2811,6 +2948,10 @@ footer .credits a {
 
     @media screen and (min-width:1132px) and (max-width: 1441px) {
       font-size: 22px;
+    }
+
+    @media screen and (min-width: 1441px) {
+      font-size: 24px;
     }
   }
 }
@@ -2869,11 +3010,28 @@ footer .credits a {
     border-image-source: linear-gradient(101.98deg, #FFFFFF 11.07%, rgba(255, 255, 255, 0) 115.46%);
     border-image-slice: 1;
     border-bottom: 1px solid;
+
+    .button-text {
+      @media screen and (min-width: 1132px) and (max-width: 1441px) {
+        font-size: 18px;
+      }
+
+      @media screen and (min-width: 1441px) {
+        font-size: 20px;
+      }
+    }
   }
 }
 
 .sidebar-open {
   .bg {
     background: linear-gradient(135deg, #183d53, #0f2027) !important;
+  }
+}
+
+.contact-anim {
+  @media screen and (max-width: 744px) {
+    opacity: 1 !important;
+    transform: translateY(0px) translateZ(0px) !important;
   }
 }

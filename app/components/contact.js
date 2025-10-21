@@ -1,6 +1,6 @@
 "use client";
 import axios from "axios";
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { FaUpwork } from "react-icons/fa6";
 import { IoMdMail } from "react-icons/io";
@@ -46,6 +46,22 @@ const child = {
 
 const Contact = () => {
   const [loading, setLoading] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  console.log("isMobile", isMobile);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768); // adjust breakpoint as needed
+    };
+
+    handleResize(); // set initial value
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+
   const ref = useRef();
   const isInView = useInView(ref, { margin: "-100px" });
   const {
@@ -82,6 +98,11 @@ const Contact = () => {
     stiffness: 100,
     damping: 30,
   });
+
+  const openInNewTab = () => {
+    const url = "https://www.upwork.com/freelancers/~013f94bc35d9d8d403";
+    window.open(url, "_blank");
+  };
 
   return (
     <section
@@ -129,10 +150,10 @@ const Contact = () => {
                     <div className="head">
                       Let’s Build Something Exceptional Together!
                     </div>
-                    <motion.div className=""
-                      variants={variants}
-                      initial="initial"
-                      whileInView="animate">
+                    <motion.div className="contact-anim"
+                      variants={!isMobile ? variants : undefined}
+                      initial={!isMobile ? "initial" : false}
+                      whileInView={!isMobile ? "animate" : false}>
                       <div className="more-info">
                         <p className="lead-info">
                           Whether you have a clear vision or just a rough idea, I’m here to help
@@ -146,7 +167,7 @@ const Contact = () => {
                               ST BOSTON, MA 02108
                             </li> */}
                           <li className="flex justify-start items-center gap-2 upwork">
-                            <button className="upwork-cta">
+                            <button className="upwork-cta" onClick={openInNewTab}>
                               <img src="/icons/upwork.png" /> Upwork
                             </button>
                           </li>
@@ -197,10 +218,10 @@ const Contact = () => {
                     <div className="desc">
                       What happens once you reach out?
                     </div>
-                    <motion.div className=""
-                      variants={variants}
-                      initial="initial"
-                      whileInView="animate">
+                    <motion.div className="contact-anim"
+                      variants={!isMobile ? variants : undefined}
+                      initial={!isMobile ? "initial" : false}
+                      whileInView={!isMobile ? "animate" : false}>
                       <div className="more-info">
                         <ul>
                           <li>I’ll contact you shortly.</li>

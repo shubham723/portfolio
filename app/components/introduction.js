@@ -7,7 +7,7 @@ const Introduction = () => {
   return (
     <div
       id="Homepage"
-      className="hero route hero-bg"
+      className="hero route"
     >
       {/* <div className="overlay-itro"></div> */}
       <div className="hero-content display-table">

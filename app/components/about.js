@@ -39,6 +39,19 @@ const child = {
 const About = () => {
   const text = "ABOUT ME";
   const words = text.split(" ");
+
+  const openInNewTab = () => {
+    const url = "https://www.upwork.com/freelancers/~013f94bc35d9d8d403";
+    window.open(url, "_blank");
+  };
+
+  const openPdfInNewTab = () => {
+    // filePath should be relative to public folder, e.g., "/files/sample.pdf"
+    const pdfUrl = `${window.location.origin}/MERN-React-Node-Shubham.pdf`;
+    window.open(pdfUrl, '_blank');
+  };
+
+
   return (
     <section
       id="About"
@@ -139,7 +152,7 @@ const About = () => {
                     </ul>
                   </div>
                   <div className="col-12 mt-1 download-cv resume">
-                    <div className="button">
+                    <div className="button" onClick={openPdfInNewTab}>
                       <div className="down">
                         <span className="button-text ms-2">
                           Download CV
@@ -258,7 +271,7 @@ const About = () => {
                       <p>
                         If you're looking for a reliable developer who understands both code and
                         client goals, let's connect. I’m open to short- or long-term freelance work and
-                        would love to discuss how we can bring your idea to life. <span className="lead-span"> Let’s build something
+                        would love to discuss how we can bring your idea to life. <span className="lead-span" onClick={openInNewTab}> Let’s build something
                           great together → </span>
                       </p>
                     </div>

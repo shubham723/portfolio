@@ -1,6 +1,11 @@
-import React from 'react'
+import React from 'react';
 
 const Partnership = () => {
+    const openInNewTab = () => {
+        const url = "https://www.upwork.com/freelancers/~013f94bc35d9d8d403";
+        window.open(url, "_blank");
+    };
+
     return (
         <div class="digi-container">
             <section class="vision-section">
@@ -12,7 +17,7 @@ const Partnership = () => {
                 </div>
 
                 <div class="vision-right">
-                    <button class="vision-btn digi-cont"><a href="javascript:void(0)">Let's Discuss Opportunities</a></button>
+                    <button class="vision-btn digi-cont" onClick={openInNewTab}><a>Let's Discuss Opportunities</a></button>
                 </div>
             </section>
         </div>
