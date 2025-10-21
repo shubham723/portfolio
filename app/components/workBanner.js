@@ -2,11 +2,8 @@ import Link from "next/link";
 
 const WorkBanner = () => {
   return (
-    <div
-      className="hero hero-single route bg-image"
-      style={{ backgroundImage: "url(/assets/img/overlay-bg.jpg)" }}
-    >
-      <div className="overlay-mf"></div>
+    <div className="hero hero-single route bg-image">
+      {/* <div className="overlay-mf"></div> */}
       <div className="hero-content display-table">
         <div className="table-cell">
           <div className="container">

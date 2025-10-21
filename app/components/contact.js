@@ -2,11 +2,11 @@
 import axios from "axios";
 import React, { useRef, useState } from "react";
 import { useForm } from "react-hook-form";
-import { FaSquarePhone } from "react-icons/fa6";
+import { FaUpwork } from "react-icons/fa6";
 import { IoMdMail } from "react-icons/io";
 import { toast } from "react-toastify";
 import Spinner from 'react-bootstrap/Spinner';
-import { motion, useInView } from "framer-motion";
+import { motion, useInView, useScroll, useSpring } from "framer-motion";
 
 const variants = {
   initial: {
@@ -19,6 +19,27 @@ const variants = {
     transition: {
       duration: 0.5,
       staggerChildren: 0.1,
+    },
+  },
+};
+
+const child = {
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      type: "spring",
+      damping: 12,
+      stiffness: 100,
+    },
+  },
+  hidden: {
+    opacity: 0,
+    x: 20,
+    transition: {
+      type: "spring",
+      damping: 12,
+      stiffness: 100,
     },
   },
 };
@@ -49,50 +70,92 @@ const Contact = () => {
     }
   };
 
+  const text = "GET IN TOUCH";
+  const words = text.split(" ");
+
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["end end", "start start"],
+  });
+
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+  });
+
   return (
     <section
       id="Contact"
-      className="paralax-mf footer-paralax bg-image sect-mt4 route flex place-content-center"
-      style={{ backgroundImage: "url(assets/img/overlay-bg.jpg)" }}
+      className="bg-image route flex place-content-center contact-us"
+      // style={{ backgroundImage: "url(assets/img/overlay-bg.jpg)" }}
       ref={ref}
     >
-      <div className="overlay-mf"></div>
+      {/* <div className="overlay-mf"></div> */}
       <div className="container flex justify-center ali">
         <div className="row">
-          <div className="col-sm-12">
+          <div className="col-sm-12 contact-wrapper">
             <div className="contact-mf">
               <div id="contact" className="box-shadow-full">
-                <div className="grid grid-col-1 md:grid-cols-2 gap-4">
-                  <motion.div className=""
-                    variants={variants}
-                    initial="initial"
-                    whileInView="animate">
-                    <div className="title-box-2 pt-4 pt-md-0">
-                      <h5 className="title-left">Let’s work together</h5>
+                <div className="pt-4 pt-md-0">
+                  <div className="row">
+                    <div className="col-sm-12">
+                      <div className="title-box text-center">
+                        {/* <h5 className="title-left">
+                          {words.map((word, index) => (
+                            <motion.span
+                              variants={child}
+                              style={{ marginRight: "5px" }}
+                              className={`word-${index}`}
+                              key={index}
+                            >
+                              {word}
+                            </motion.span>
+                          ))}
+                        </h5> */}
+                        {/* <span class="title-bg-portfolio portfolio-bg">CONTACT</span> */}
+                        <p className="contact-head">
+                          Ready to <span> scale </span> your business?
+                        </p>
+                        {/* <motion.div style={{ scaleX }} className="progressBar"></motion.div> */}
+                      </div>
                     </div>
-                    <div className="more-info">
-                      <p className="lead text-[16px] text16 mt-3">
-                        I'm just a message away! If you have any questions,
-                        ideas, or simply want to connect, feel free to reach
-                        out. I'm here to assist you. Drop me a line using the
-                        form, and I'll get back to you promptly. Let's start a 
-                        conversation and explore how I can help
-                        you achieve your goals.
-                      </p>
-                      <ul className="list-ico">
-                        {/* <li>
+                  </div>
+                </div>
+                <div className="contact-back-image">
+                  <img src="/images/portfolio.png" />
+                </div>
+                <div className="grid grid-col-1 md:grid-cols-2 gap-4 contact-section-info">
+                  <div className="build-section">
+                    <div className="head">
+                      Let’s Build Something Exceptional Together!
+                    </div>
+                    <motion.div className=""
+                      variants={variants}
+                      initial="initial"
+                      whileInView="animate">
+                      <div className="more-info">
+                        <p className="lead-info">
+                          Whether you have a clear vision or just a rough idea, I’m here to help
+                          bring it to life. I'm always open to discussing new projects, exploring
+                          creative ideas, or finding ways to contribute to your goals. Feel free to
+                          reach out — I’d love to be a part of what you’re building.
+                        </p>
+                        <ul className="list-ico">
+                          {/* <li>
                               <span className="bi bi-geo-alt"></span> 329 WASHINGTON
                               ST BOSTON, MA 02108
                             </li> */}
-                        <li className="flex justify-start items-center gap-2">
-                          <FaSquarePhone /> +918054296478
-                        </li>
-                        <li className="flex justify-start items-center gap-2">
+                          <li className="flex justify-start items-center gap-2 upwork">
+                            <button className="upwork-cta">
+                              <img src="/icons/upwork.png" /> Upwork
+                            </button>
+                          </li>
+                          {/* <li className="flex justify-start items-center gap-2">
                           <IoMdMail /> sshubham7774@gmail.com
-                        </li>
-                      </ul>
-                    </div>
-                    {/* <div className="socials">
+                        </li> */}
+                        </ul>
+                      </div>
+                      {/* <div className="socials">
                           <ul>
                             <li>
                               <a href="">
@@ -124,9 +187,30 @@ const Contact = () => {
                             </li>
                           </ul>
                         </div> */}
-                  </motion.div>
+                    </motion.div>
+                  </div>
 
-                  <motion.div
+                  <div className="journey">
+                    <div className="head">
+                      Your Innovation Journey Starts Right Here.
+                    </div>
+                    <div className="desc">
+                      What happens once you reach out?
+                    </div>
+                    <motion.div className=""
+                      variants={variants}
+                      initial="initial"
+                      whileInView="animate">
+                      <div className="more-info">
+                        <ul>
+                          <li>I’ll contact you shortly.</li>
+                          <li>I’ll carefully listen to your needs.</li>
+                          <li>You’ll get a FREE project-focused consultation.</li>
+                        </ul>
+                      </div>
+                    </motion.div>
+                  </div>
+                  {/* <motion.div
                     className="phoneSvg"
                     initial={{ opacity: 1 }}
                     whileInView={{ opacity: 0 }}
@@ -156,9 +240,9 @@ const Contact = () => {
             C32.666,7.326,25.339,0,16.333,0z"
                       />
                     </svg>
-                  </motion.div>
+                  </motion.div> */}
 
-                  <motion.div className=""
+                  {/* <motion.div className=""
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}
@@ -263,14 +347,14 @@ const Contact = () => {
                         </div>
                       </form>
                     </div>
-                  </motion.div>
+                  </motion.div> */}
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </section >
   );
 };
 

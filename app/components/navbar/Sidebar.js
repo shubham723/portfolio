@@ -22,9 +22,8 @@ const variants = {
   },
 };
 const Sidebar = ({ closeNavInMobile, navList, setOpen, open }) => {
-    console.log(open);
   return (
-    <motion.div className="sidebar" animate={open ? "open" : "closed"}>
+    <motion.div className={`sidebar ${open && "sidebar-open"}`} animate={open ? "open" : "closed"}>
       <motion.div className="bg" variants={variants}>
         <Links closeNavInMobile={closeNavInMobile} navList={navList} setOpen={setOpen} />
       </motion.div>
