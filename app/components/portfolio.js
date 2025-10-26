@@ -3,9 +3,10 @@ import { portfolioData } from "@/lib/data";
 import { useScroll, useSpring, motion } from "framer-motion";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { CiCirclePlus } from "react-icons/ci";
 import { MdArrowOutward } from "react-icons/md";
+import { useScrollRestoration } from "./custom-hooks/useScrollRestoration";
 
 
 const child = {
@@ -46,6 +47,8 @@ const Portfolio = () => {
   const text = "Featured  Projects";
   const words = text.split(" ");
 
+  useScrollRestoration("portfolio-scroll");
+
   return (
     <section
       id="Portfolio"
@@ -80,7 +83,7 @@ const Portfolio = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 portfolio-card content-center">
           {portfolioData.map((item) => {
             return (
-              <div className="work-box" key={item.id}>
+              <div className={`work-box ${item?.className}`} key={item.id}>
                 {/* <div> */}
                 {/* <a
                   href={item.thumbnail}

@@ -1,3 +1,4 @@
+"use client";
 const Work = ({ data }) => {
   return (
     <main id="main">
@@ -14,9 +15,9 @@ const Work = ({ data }) => {
                   <li>
                     <strong>Tech Stack</strong>: {data.techStack}
                   </li>
-                  <li>
+                  {/* <li>
                     <strong>Project URL</strong>: <a href={data.url} target="blank">{data.url}</a>
-                  </li>
+                  </li> */}
                 </ul>
               </div>
               <div className="portfolio-description">

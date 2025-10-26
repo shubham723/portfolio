@@ -10,7 +10,7 @@ const Partnership = () => {
         <div class="digi-container">
             <section class="vision-section">
                 <div class="vision-left">
-                    <h2>YOUR VISION. OUR CODE. ONE POWERFUL PARTNERSHIP.</h2>
+                    <h2>YOUR VISION. MY EXPERTISE. ONE POWERFUL PARTNERSHIP.</h2>
                     <p>
                         From API integrations and cloud-native architecture to AI-driven automation and full-stack development, get secure, high-performance digital solutions aligned with your product roadmap and business goals.
                     </p>

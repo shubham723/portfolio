@@ -2,7 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { FaArrowRight } from "react-icons/fa";
+import { FaRegEye  } from "react-icons/fa";
 
 const container = {
   hidden: { opacity: 0 },
@@ -60,7 +60,7 @@ const About = () => {
       <div className="container">
         <div className="row">
           <div className="col-sm-12">
-            <div className="box-shadow-full">
+            <div className="box-shadow-full about-back">
 
               <div className="row">
                 <motion.div className="title-box-2 flex justify-center"
@@ -155,9 +155,9 @@ const About = () => {
                     <div className="button" onClick={openPdfInNewTab}>
                       <div className="down">
                         <span className="button-text ms-2">
-                          Download CV
+                          View CV
                         </span>
-                        <FaArrowRight className="ms-2" />
+                        <FaRegEye  className="ms-2" />
                       </div>
                     </div>
                   </div>

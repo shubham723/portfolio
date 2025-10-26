@@ -29,17 +29,17 @@ const Portfolio = ({ params }) => {
     <>
       {loading ? (
         <div className="spinner">
-            <Spinner animation="border" />
+          <Spinner animation="border" />
         </div>
       ) : (
         data ?
-        <>
-          <WorkBanner />
-          <Work data={data} />
-          {/* <Footer /> */}
-        </>
-        : 
-        <NotFound />
+          <>
+            <WorkBanner />
+            <Work data={data} />
+            {/* <Footer /> */}
+          </>
+          :
+          <NotFound />
       )}
     </>
   );
