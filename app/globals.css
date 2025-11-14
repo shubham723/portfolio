@@ -109,7 +109,9 @@ a:hover {
 
 .resume {
   .button:hover::before {
-    transform: translateX(0px);
+    @media screen and (min-width: 768px) {
+      transform: translateX(0px);
+    }
   }
 
   .button::before {
@@ -1228,6 +1230,10 @@ a:hover {
   position: absolute;
   top: -144px;
   right: 10px;
+
+  @media screen and (max-width:768px) {
+    top: -300px;
+  }
 }
 
 
@@ -1314,7 +1320,7 @@ a:hover {
     align-items: center;
     /* border: 1px solid #6ca7c9; */
     /* background: #023451; */
-    background: #044f7b;
+    background: #0869a1;
     border-radius: 68px;
     padding: 8px 30px;
     width: 100%;
@@ -1698,11 +1704,11 @@ a:hover {
   font-weight: 600;
 }
 
-.sidekick {
+/* .sidekick {
   img  {
     height: 150px;
   }
-}
+} */
 
 /*--------------------------------------------------------------
 # About
@@ -1859,6 +1865,14 @@ a:hover {
 
 .work-img img {
   transition: all 1s;
+
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    min-height: 109px;
+  }
+
+  /* @media screen and (min-width: 991px) and (max-width: 1134px) {
+    min-height: 150px;
+  } */
 }
 
 .work-content {
@@ -1952,9 +1966,9 @@ a:hover {
     margin-top: 4px;
 
     @media screen and (min-width: 744px) and (max-width: 1132px) {
-      white-space: nowrap;
+      /* white-space: nowrap; */
       overflow: hidden;
-      text-overflow: ellipsis;
+      /* text-overflow: ellipsis; */
       word-spacing: 1px;
       font-size: 12px;
     }
@@ -2057,6 +2071,7 @@ a:hover {
 
 .portfolio-details .portfolio-details-slider img {
   width: 100%;
+  padding-bottom: 48px;
 }
 
 .portfolio-details .portfolio-details-slider .swiper-pagination {
@@ -2801,7 +2816,9 @@ footer .credits a {
   }
 
   .button:hover:before {
-    transform: translateX(0);
+    @media screen and (min-width: 768px) {
+      transform: translateX(0px);
+    }
   }
 
   .cv-download:hover:before {
@@ -2836,7 +2853,9 @@ footer .credits a {
 
 
   .button:hover:before {
-    transform: translateX(0);
+    @media screen and (min-width: 768px) {
+      transform: translateX(0px);
+    }
   }
 
   .fa-download:before {
