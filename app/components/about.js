@@ -47,7 +47,7 @@ const About = () => {
 
   const openPdfInNewTab = () => {
     // filePath should be relative to public folder, e.g., "/files/sample.pdf"
-    const pdfUrl = `${window.location.origin}/Resume-Shubham-Bhardwaj-1.pdf`;
+    const pdfUrl = `${window.location.origin}/Resume-Shubham-Bhardwaj-3.pdf`;
     window.open(pdfUrl, '_blank');
   };
 
