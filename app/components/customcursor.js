@@ -1,4 +1,4 @@
-'use client'; // if using App Router
+'use client';
 
 import { useEffect, useRef, useState } from 'react';
 
@@ -7,6 +7,7 @@ export default function CustomCursor() {
   const requestRef = useRef();
   const mouse = useRef({ x: 0, y: 0 });
   const pos = useRef({ x: 0, y: 0 });
+  const hideTimeout = useRef(null);
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -14,11 +15,20 @@ export default function CustomCursor() {
       mouse.current = { x: e.clientX, y: e.clientY };
     };
 
-    const handleMouseEnter = () => setVisible(true);
-    const handleMouseLeave = () => setVisible(false);
+    const handleMouseDown = () => {
+      // Show cursor immediately
+      setVisible(true);
+
+      // Clear previous timeout if clicking again
+      if (hideTimeout.current) clearTimeout(hideTimeout.current);
+
+      // Hide after 2 seconds
+      hideTimeout.current = setTimeout(() => {
+        setVisible(false);
+      }, 500);
+    };
 
     const animate = () => {
-      // Smooth follow
       pos.current.x += (mouse.current.x - pos.current.x) * 0.15;
       pos.current.y += (mouse.current.y - pos.current.y) * 0.15;
 
@@ -30,16 +40,15 @@ export default function CustomCursor() {
     };
 
     document.addEventListener('mousemove', handleMouseMove);
-    document.addEventListener('mouseenter', handleMouseEnter);
-    document.addEventListener('mouseleave', handleMouseLeave);
+    document.addEventListener('mousedown', handleMouseDown);
 
-    animate(); // start animation
+    animate();
 
     return () => {
       document.removeEventListener('mousemove', handleMouseMove);
-      document.removeEventListener('mouseenter', handleMouseEnter);
-      document.removeEventListener('mouseleave', handleMouseLeave);
+      document.removeEventListener('mousedown', handleMouseDown);
       cancelAnimationFrame(requestRef.current);
+      if (hideTimeout.current) clearTimeout(hideTimeout.current);
     };
   }, []);
 
@@ -58,9 +67,8 @@ export default function CustomCursor() {
         pointerEvents: 'none',
         opacity: visible ? 1 : 0,
         zIndex: 9999,
-        // mixBlendMode: 'difference',
         transform: 'translate3d(0, 0, 0)',
-        transition: 'opacity 0.2s ease',
+        transition: 'opacity 0.25s ease',
       }}
     />
   );
